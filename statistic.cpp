@@ -21,10 +21,7 @@ using namespace std;
 
 #define MAX_COMMIT 5000
 #define MAX_FILE 200
-// map<string,int> fn2i;
-// int mindex;
-// int mascii[MAX_FILE];
-// map<string,char> fn2c[MAX_FUNC];
+
 map<string,int> fn2i;
 int fcnt;
 double counter[MAX_FILE][MAX_COMMIT];
@@ -50,7 +47,6 @@ int myread(char* path){
 	while(!feof(fp)){
         char* buf = fgets(line,1023,fp);
 		if(buf==NULL) break;
-        //cnt++;
         if(BeginWith(line,"-----")){
             cnt ++;
             continue;
@@ -76,12 +72,10 @@ int myread(char* path){
         double rate = atof(r);
         counter[index][cnt] = rate;
 	}
-    cout <<"123" << endl;;
-    //printf("%d\n",cnt);
+    cout <<"123" << endl;
     map<string,int>::iterator ite;
     ite = fn2i.begin();
     while(ite != fn2i.end()){
-        //printf("%s",ite->first);
         cout << ite->first;
         int findex = ite->second;
         for(int i=0;i < MAX_COMMIT;i++){
