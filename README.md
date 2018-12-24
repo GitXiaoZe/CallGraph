@@ -1,6 +1,4 @@
 # CallGraph
 
 Dependencies :
-  sudo apt-get install cflow
-  sudo apt-get install g++
-  sudo apt-get install git
+  sudo apt-get install cflow g++ git -y 
