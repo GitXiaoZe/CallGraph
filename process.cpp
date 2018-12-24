@@ -38,8 +38,7 @@ int convertTree2String(char* path, char* result,int mapindex);
 
 char relative_path[MAX_NAME];
 char str1[MAX];
-//char str2[MAX];
-//short lcs[LCS_MAX<<1][LCS_MAX<<1];
+
 short** lcs;
 
 char* CMD = "cflow";
@@ -59,7 +58,7 @@ map<string,char> fn2c[MAX_FUNC];
 map<string,int> fn2cnt[MAX_FUNC];
 
 
-//copy src to dest, and return the copied bytes' lengtL
+//copy src to dest, and return the copied bytes' length
 int mystrcpy(char *dest, char *src){
 	if(dest==NULL || src == NULL){
 		printf("dest is NULL or src is NULL\n");
@@ -276,8 +275,8 @@ int begin(char *path,char* output,char *commit_id_file){
 	int cnt = 0;
 	while(!feof(fp)){
 		cnt++;
-		printf("%d\n",cnt);
-		fprintf(out,"----------%d------------\n",cnt);
+		//printf("%d\n",cnt);
+		fprintf(out,"----------------------\n",cnt);
 		char *temp = fgets(cid,60,fp);
 		if(temp==NULL)	break;
 		int i;
