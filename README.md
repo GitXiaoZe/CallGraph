@@ -16,7 +16,7 @@
   
 # Build :
 
-    using g++ to complie the .c/.cpp file
+    use g++ to complie the .c/.cpp file
     
 # Usage:
 
